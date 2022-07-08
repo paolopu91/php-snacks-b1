@@ -59,7 +59,7 @@ $basketGames = [
     ],
 ];
 
-// var_dump($basketGames);
+var_dump($basketGames);
 
 ?>
 
