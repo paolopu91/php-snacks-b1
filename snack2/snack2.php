@@ -14,6 +14,7 @@ $ageUser = key_exists("age",$_GET) ? trim($_GET["age"]): false;
 $userName = true;
 $userMail = true;
 $userAge = true;
+
 // condition for the nameUser
 if(!$nameUser){
     echo "Nome Utente mancante";
@@ -25,6 +26,7 @@ if(!$nameUser){
         echo "<span>Nome non valido</span>";
 
     }elseif(strlen($nameUser) >= 3 ){
+        $userName=true;
         echo  "<strong>Nome Valido</strong>";
     }
     var_dump($nameUser);
@@ -44,12 +46,14 @@ if(!$mailUser){
     if(stripos($mailUser, "@")){
         $userMail=false;
     }else{
+        $userMail=true;
         echo "Ti sei dimenticato di inserire la @";
     };
 
     if(strpos($mailUser, ".")){
         $userMail=false;
     }else{
+        $userMail=true;
         echo "ti sei dimanticato di inserire il .";
     }
     var_dump($mailUser);
@@ -66,13 +70,24 @@ if(!$ageUser){
         $userAge= false;
     echo "Età valida";
     }else{
+        $userAge=true;
         echo "Età non valida";
     }
     var_dump($ageUser);
 
 
-
+if($userAge = true){
+    if($userMail = true){
+        if($userName = true){
+            echo "Accesso Riuscito!";
+        }else{
+            echo "Accesso Negato!";
+        }
+    }
+}
+    
 };
+
 
 
 
