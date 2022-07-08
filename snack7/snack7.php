@@ -10,45 +10,47 @@ $classePrimaB = [
         "name"=>"Daniele",
         "surname"=>"Lico",
         "voti" =>[
-            "matematica" => 7,
-            "italiano" => 8,
-            "inglese" => 5,
-            "latino" => 6,
+             7,
+             8,
+             5,
+             6,
         ],
     ],
     [
         "name"=>"Flavio",
         "surname"=>"Gonnellini",
         "voti" =>[
-            "matematica" => 6,
-            "italiano" => 6,
-            "inglese" => 4,
-            "latino" => 8,
+             6,
+             6,
+             4,
+            8,
         ],
     ],
     [
         "name"=>"Marcello",
         "surname"=>"Micarelli",
         "voti" =>[
-            "matematica" => 7,
-            "italiano" => 5,
-            "inglese" => 8,
-            "latino" => 4,
+            7,
+            5,
+             8,
+            4,
         ],
     ],
     [
         "name"=>"Giuseppe Andrea",
         "surname"=>"Cencioni",
         "voti" =>[
-            "matematica" => 7,
-            "italiano" => 5,
-            "inglese" => 5,
-            "latino" => 9,
+             7,
+             5,
+             5,
+             9,
         ],
     ],
 ];
 
-var_dump($classePrimaB)
+//sommo i numeri dentro il mio array di voti
+var_dump($classePrimaB);
+
 ?>
 
 
@@ -87,6 +89,14 @@ var_dump($classePrimaB)
 
                 <h5>
                     <!-- media voti -->
+                    <?php  
+
+                    $somma = array_sum($classePrimaB[$i]["voti"]);
+
+                    $media = $somma / count($classePrimaB[$i]["voti"]);
+
+                    echo "Media scolastica :" .$media;
+                    ?>
                 </h5>
             <?php } ?>
         </div>
