@@ -20,10 +20,10 @@ $classePrimaB = [
         "name"=>"Flavio",
         "surname"=>"Gonnellini",
         "voti" =>[
-            "matematica" => 7,
-            "italiano" => 8,
-            "inglese" => 5,
-            "latino" => 6,
+            "matematica" => 6,
+            "italiano" => 6,
+            "inglese" => 4,
+            "latino" => 8,
         ],
     ],
     [
@@ -31,9 +31,9 @@ $classePrimaB = [
         "surname"=>"Micarelli",
         "voti" =>[
             "matematica" => 7,
-            "italiano" => 8,
-            "inglese" => 5,
-            "latino" => 6,
+            "italiano" => 5,
+            "inglese" => 8,
+            "latino" => 4,
         ],
     ],
     [
@@ -41,9 +41,9 @@ $classePrimaB = [
         "surname"=>"Cencioni",
         "voti" =>[
             "matematica" => 7,
-            "italiano" => 8,
+            "italiano" => 5,
             "inglese" => 5,
-            "latino" => 6,
+            "latino" => 9,
         ],
     ],
 ];
