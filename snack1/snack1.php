@@ -85,21 +85,25 @@ var_dump($basketGames);
     <main>
     <!-- result of array in php -->
     <div class="container text-center">
-    <?php for($i; $i<count($basketGames); $i++){
-        ?>
-        <span>
-            <?php echo $basketGames[$i]["homeTeam"]; ?> 
-        </span>
-        <span> <?php echo $basketGames[$i]["PointsHomeTeam"]; ?> </span>
-        <br>
-        <span>
-            <?php echo $basketGames[$i]["visitingTeam"]; ?> 
-        </span>
-        <span> 
-            <?php echo $basketGames[$i]["PointsVisitingTeam"]; ?> 
-        </span>
-        
-    <?php } ?>
+        <div>
+            <?php for($i = 0; $i<count($basketGames); $i++){
+                $gameDay = $basketGames[$i];
+
+                ?>
+                <span>
+                    <?php echo $basketGames[$i]["homeTeam"]; ?> 
+                </span>
+                <span> <?php echo $basketGames[$i]["pointsHomeTeam"]; ?> </span>
+                <br>
+                <span>
+                    <?php echo $basketGames[$i]["visitingTeam"]; ?> 
+                </span>
+                <span> 
+                    <?php echo $basketGames[$i]["pointsVisitingTeam"]; ?> 
+                </span>
+                
+            <?php } ?>
+        </div>
     </div>
     </main>
 
