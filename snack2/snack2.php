@@ -12,6 +12,8 @@ $mailUser = key_exists("mail",$_GET) ? trim($_GET["mail"]) : false;
 $ageUser = key_exists("age",$_GET) ? trim($_GET["age"]): false;
 
 $userName = true;
+$userMail = true;
+$userAge = true;
 // condition for the nameUser
 if(!$nameUser){
     echo "Nome Utente mancante";
@@ -26,6 +28,54 @@ if(!$nameUser){
         echo  "<strong>Nome Valido</strong>";
     }
     var_dump($nameUser);
-}
+};
+
+$userMail= false;
+
+if(!$mailUser){
+    echo "Email Utente Mancante";
+}else{
+
+    // here i will write my condition for mailUser
+    if(stripos($mailUser,"@") and strpos($mailUser, ".")){
+        echo "Email valida";
+    }
+
+    if(stripos($mailUser, "@")){
+        $userMail=false;
+    }else{
+        echo "Ti sei dimenticato di inserire la @";
+    };
+
+    if(strpos($mailUser, ".")){
+        $userMail=false;
+    }else{
+        echo "ti sei dimanticato di inserire il .";
+    }
+    var_dump($mailUser);
+};
+
+$userAge=false;
+
+if(!$ageUser){
+    echo "età mancante";
+}else{
+
+    // i will write here all my condition for numeric age
+    if(is_numeric($ageUser)){
+        $userAge= false;
+    echo "Età valida";
+    }else{
+        echo "Età non valida";
+    }
+    var_dump($ageUser);
+
+
+
+};
+
+
+
+
 
 ?>
