@@ -90,18 +90,30 @@ var_dump($basketGames);
                 $gameDay = $basketGames[$i];
 
                 ?>
-                <span>
-                    <?php echo $basketGames[$i]["homeTeam"]; ?> 
-                </span>
-                <span> <?php echo $basketGames[$i]["pointsHomeTeam"]; ?> </span>
-                <br>
-                <span>
-                    <?php echo $basketGames[$i]["visitingTeam"]; ?> 
-                </span>
-                <span> 
-                    <?php echo $basketGames[$i]["pointsVisitingTeam"]; ?> 
-                </span>
-                
+                <div class="row">
+                    <div class="col">
+                        <!-- home team -->
+                        <div class="py-3">
+                            <span>
+                                <?php echo "Home Team : "  .$basketGames[$i]["homeTeam"]; ?> 
+                            </span>
+                            <span> <?php echo "Risultato Finale : " . $basketGames[$i]["pointsHomeTeam"]; ?> </span>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <!-- visiting team -->
+                        <div class="py-3">
+
+                            <span>
+                                <?php echo "Visiting Team : " .$basketGames[$i]["visitingTeam"]; ?> 
+                            </span>
+                            <span> 
+                                <?php echo "Risultato Finale : " .$basketGames[$i]["pointsVisitingTeam"]; ?> 
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                   
             <?php } ?>
         </div>
     </div>
